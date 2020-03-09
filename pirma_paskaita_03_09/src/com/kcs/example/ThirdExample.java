@@ -27,8 +27,9 @@ public class ThirdExample {
             System.out.println("Iveskite zodi, jei norite baigti iveskite pabaiga:");
             name = sc.nextLine();
             example.printMethodEven(name);
-            //todo patikrinti ar ne pabaiga
-            System.out.println("skaicius a raidziu yra " + getNumbOfLetters(name, 'a'));
+           if(!name.toLowerCase().equals("pabaiga")) {
+               System.out.println("skaicius a raidziu yra " + getNumbOfLetters(name, 'a'));
+           }
         } while (!name.toLowerCase().equals("pabaiga"));
     }
 
