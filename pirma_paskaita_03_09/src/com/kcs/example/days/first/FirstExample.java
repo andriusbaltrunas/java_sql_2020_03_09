@@ -1,4 +1,4 @@
-package com.kcs.example;
+package com.kcs.example.days.first;
 
 public class FirstExample {
     public static void main(String[] args) {
