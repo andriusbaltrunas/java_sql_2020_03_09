@@ -8,8 +8,8 @@ public class ThirdTask {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int select = -1;
-        while (select != 0) {
+        int select;
+        do {
             System.out.println("Pasirinkite kokios figuros plota skaiciuosite:");
             System.out.println("1. Statusis trikampis\n2. Staciakampis\n3. Kvadratas\n4. Apskritimas\n0. Pabaiga");
 
@@ -34,7 +34,7 @@ public class ThirdTask {
                     System.out.println("Nerasta");
                     break;
             }
-        }
+        }while (select != 0);
     }
 
     private static int getCorrectValue(Scanner scanner) {
