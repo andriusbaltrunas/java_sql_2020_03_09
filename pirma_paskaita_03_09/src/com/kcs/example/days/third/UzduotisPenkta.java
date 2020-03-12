@@ -15,7 +15,7 @@ public class UzduotisPenkta {
 
     }
 
-    private double average(double nuvaziuotasAtstumas, double kuroSanaudos) {
+    protected double average(double nuvaziuotasAtstumas, double kuroSanaudos) {
         return (kuroSanaudos * 100) / nuvaziuotasAtstumas;
     }
 
