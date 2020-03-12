@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2a4f13f-758f-431c-8f21-acab0515c0aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cars.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/kcs/example/days/third/TaskFifeReadFromFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/kcs/example/days/third/WriteToFileExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +38,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
-  <component name="RunManager" selected="Application.TaskFifeReadFromFile">
+  <component name="RunManager" selected="Application.WriteToFileExample">
     <configuration name="SecondTasks" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.kcs.example.days.second.SecondTasks" />
       <module name="pirma_paskaita_03_09" />
@@ -59,19 +58,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.kcs.example.days.third.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ThirdExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.kcs.example.days.first.ThirdExample" />
-      <module name="pirma_paskaita_03_09" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.kcs.example.days.first.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,13 +91,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WriteToFileExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.kcs.example.days.third.WriteToFileExample" />
+      <module name="pirma_paskaita_03_09" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.kcs.example.days.third.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WriteToFileExample" />
         <item itemvalue="Application.TaskFifeReadFromFile" />
         <item itemvalue="Application.UzduotisPenkta" />
         <item itemvalue="Application.ThirdTask" />
         <item itemvalue="Application.SecondTasks" />
-        <item itemvalue="Application.ThirdExample" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +127,7 @@
       <workItem from="1583769816080" duration="7439000" />
       <workItem from="1583769663080" duration="3750000" />
       <workItem from="1583770328630" duration="5993000" />
-      <workItem from="1583771382181" duration="4282000" />
+      <workItem from="1583771382181" duration="6877000" />
     </task>
     <task id="LOCAL−00001" summary="add if">
       <created>1583770388842</created>
@@ -160,7 +159,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1584032661990</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="read file">
+      <created>1584032139747</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1584032139747</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,13 +177,14 @@
     <MESSAGE value="add another task" />
     <MESSAGE value="change while to do while" />
     <MESSAGE value="trecia diena penkta uzduotis" />
-    <option name="LAST_COMMIT_MESSAGE" value="trecia diena penkta uzduotis" />
+    <MESSAGE value="read file" />
+    <option name="LAST_COMMIT_MESSAGE" value="read file" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="242" y="24" width="1130" height="812" key="CommitChangelistDialog2" timestamp="1584032660584">
+    <state x="242" y="24" width="1130" height="812" key="CommitChangelistDialog2" timestamp="1584032138378">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="242" y="24" width="1130" height="812" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1584032660584" />
+    <state x="242" y="24" width="1130" height="812" key="CommitChangelistDialog2/0.0.1440.860@0.0.1440.860" timestamp="1584032138378" />
     <state width="384" height="466" key="DebuggerActiveHint" timestamp="1583771185844">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -187,22 +193,22 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="500" y="188" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1583770305494" />
-    <state width="1397" height="82" key="GridCell.Tab.0.bottom" timestamp="1584030876391">
+    <state width="1397" height="227" key="GridCell.Tab.0.bottom" timestamp="1584032650596">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="82" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1584030876391" />
-    <state width="1397" height="82" key="GridCell.Tab.0.center" timestamp="1584030876390">
+    <state width="1397" height="227" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1584032650596" />
+    <state width="1397" height="227" key="GridCell.Tab.0.center" timestamp="1584032650596">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="82" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1584030876390" />
-    <state width="1397" height="82" key="GridCell.Tab.0.left" timestamp="1584030876390">
+    <state width="1397" height="227" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1584032650596" />
+    <state width="1397" height="227" key="GridCell.Tab.0.left" timestamp="1584032650596">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="82" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1584030876390" />
-    <state width="1397" height="82" key="GridCell.Tab.0.right" timestamp="1584030876391">
+    <state width="1397" height="227" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1584032650596" />
+    <state width="1397" height="227" key="GridCell.Tab.0.right" timestamp="1584032650596">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1397" height="82" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1584030876391" />
+    <state width="1397" height="227" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1584032650596" />
     <state width="1397" height="276" key="GridCell.Tab.1.bottom" timestamp="1584032482696">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -223,10 +229,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="223" y="75" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1583770131262" />
-    <state x="312" y="166" key="Vcs.Push.Dialog.v2" timestamp="1584032663636">
+    <state x="312" y="166" key="Vcs.Push.Dialog.v2" timestamp="1584032142399">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="312" y="166" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1584032663636" />
+    <state x="312" y="166" key="Vcs.Push.Dialog.v2/0.0.1440.860@0.0.1440.860" timestamp="1584032142399" />
     <state x="430" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1584030985680">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
