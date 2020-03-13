@@ -1,8 +1,6 @@
 package com.kcs.example.days.fife;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class AJCodeConverter {
@@ -10,7 +8,7 @@ public class AJCodeConverter {
     private static final String EMPTY = " ";
 
     public static void main(String[] args) {
-        Map<String, String> code = readCode();
+        Map<String, String> code = readCode(true);
         StringBuilder sb = new StringBuilder();
         for (String item : readLetter()) {
             String translation = code.get(item);
@@ -23,10 +21,11 @@ public class AJCodeConverter {
         System.out.println("Isverstas laisvas");
         System.out.println(sb.toString());
 
-        encryptText(code);
+        encryptText();
     }
 
-    private static void encryptText(Map<String, String> code) {
+    private static void encryptText() {
+        Map<String, String> code = readCode(false);
         Scanner sc = new Scanner(System.in);
         StringBuilder sb = new StringBuilder();
         String line = sc.nextLine();
@@ -40,9 +39,20 @@ public class AJCodeConverter {
             sb.append(decrypt).append(EMPTY);
         }
         String result = sb.toString().trim();
+
+        writeToFile(result);
     }
 
-    private static Map<String, String> readCode() {
+    private static void writeToFile(String text) {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter("encrypted.txt"))) {
+            bw.write(text);
+            bw.flush();
+        } catch (IOException e) {
+            System.out.println("Cannot write to file");
+        }
+    }
+
+    private static Map<String, String> readCode(boolean isEncodeKey) {
         Map<String, String> code = new HashMap<>();
 
         try (BufferedReader bf = new BufferedReader(new FileReader("code.txt"))) {
@@ -50,7 +60,7 @@ public class AJCodeConverter {
             while ((line = bf.readLine()) != null) {
                 String[] items = line.split(EMPTY);
                 if (items.length == 2) {
-                    code.put(items[0], items[1]);
+                    code.put(isEncodeKey ? items[0] : items[1], isEncodeKey ? items[1] : items[0]);
                 }
             }
         } catch (IOException e) {
