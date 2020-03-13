@@ -1,7 +1,5 @@
 package com.kcs.example.days.third;
 
-import com.kcs.example.days.third.UzduotisPenkta;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
