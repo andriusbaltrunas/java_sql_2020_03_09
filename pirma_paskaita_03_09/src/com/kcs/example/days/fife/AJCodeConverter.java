@@ -21,6 +21,7 @@ public class AJCodeConverter {
         System.out.println("Isverstas laisvas");
         System.out.println(sb.toString());
 
+
         encryptText();
     }
 
