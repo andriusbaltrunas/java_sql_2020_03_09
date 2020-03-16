@@ -1,0 +1,6 @@
+car-masina
+dog-sou
+bus-autobusas
+pc-kompiuteris
+keyboard-klaivatura
+mouse-pele
