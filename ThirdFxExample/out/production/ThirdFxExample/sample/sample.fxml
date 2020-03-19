@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="270.0" prefWidth="457.0">
+         <children>
+            <TextField fx:id="ltTextField" layoutX="75.0" layoutY="56.0" promptText="LT" />
+            <TextField fx:id="enTextField" layoutX="256.0" layoutY="56.0" promptText="EN" />
+            <Label layoutX="235.0" layoutY="60.0" text=":" />
+            <Button layoutX="179.0" layoutY="124.0" mnemonicParsing="false" onAction="#translate" prefHeight="99.0" prefWidth="118.0" text="Translate" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
