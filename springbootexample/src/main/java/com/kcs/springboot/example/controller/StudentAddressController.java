@@ -31,9 +31,9 @@ public class StudentAddressController
 		return studentAddressService.getStudentAddresses(studentId);
 	}
 
-	/**
-	 * TODO:
-	 * 1. create api to get student address ex. /students/1/address/2
-	 * 2. create method to get address from DB in studentAddressService
-	 */
+	@GetMapping("/{addressId}")
+	public StudentAddress getStudentAddress(@PathVariable("studentId") String studentId, @PathVariable("addressId") String addressId)
+	{
+		return studentAddressService.getStudentAddress(studentId, addressId);
+	}
 }

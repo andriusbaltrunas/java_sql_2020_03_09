@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
@@ -29,4 +30,13 @@ public class JDBCConnector
 		return null;
 	}
 
+	public PreparedStatement getPrepareStatement(String query) throws SQLException
+	{
+		Connection connection = createConnection();
+		if(connection == null)
+		{
+			throw new SQLException("connection is null");
+		}
+		return connection.prepareStatement(query);
+	}
 }

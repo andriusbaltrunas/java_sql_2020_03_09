@@ -30,15 +30,10 @@ public class StudentAddressService
 	public List<StudentAddress> getStudentAddresses(String studentId)
 	{
 		List<StudentAddress> studentAddresses = new ArrayList<>();
-		Connection connection = jdbcConnector.createConnection();
-		if(connection == null)
-		{
-			return studentAddresses;
-		}
 
 		try
 		{
-			PreparedStatement preparedStatement = connection.prepareStatement("select * from student_address where student_id = ?");
+			PreparedStatement preparedStatement = jdbcConnector.getPrepareStatement("select * from student_address where student_id = ?");
 			preparedStatement.setInt(1, Integer.parseInt(studentId));
 
 			ResultSet resultSet = preparedStatement.executeQuery();
@@ -54,6 +49,25 @@ public class StudentAddressService
 		}
 
 		return studentAddresses;
+	}
+
+	public StudentAddress getStudentAddress(String studentId, String addressId)
+	{
+		try
+		{
+			PreparedStatement preparedStatement = jdbcConnector.getPrepareStatement("select * from student_address where student_id = ? and id = ?");
+			preparedStatement.setInt(1, Integer.parseInt(studentId));
+			preparedStatement.setInt(2, Integer.parseInt(addressId));
+			ResultSet resultSet = preparedStatement.executeQuery();
+			resultSet.next();
+
+			return convertToStudentAddress(resultSet);
+		}
+		catch(SQLException e)
+		{
+
+		}
+		return null;
 	}
 
 	private StudentAddress convertToStudentAddress(ResultSet resultSet) throws SQLException
