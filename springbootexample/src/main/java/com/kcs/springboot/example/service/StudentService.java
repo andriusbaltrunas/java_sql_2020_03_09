@@ -47,7 +47,10 @@ public class StudentService
 
 			preparedStatement.execute();
 
-			return getStudents().stream().filter(s -> s.equals(student)).findFirst().orElse(null);
+			return getStudents().stream()
+					.filter(s -> s.equals(student))
+					.findFirst()
+					.orElse(null);
 
 		}
 		catch(SQLException e)
@@ -114,5 +117,54 @@ public class StudentService
 						   resultSet.getString("surname"),
 						   resultSet.getString("phone"),
 						   resultSet.getString("email"));
+	}
+
+	public void deleteStudent(String studentId)
+	{
+		Connection connection = jdbcConnector.createConnection();
+		if(connection == null)
+		{
+			return;
+		}
+
+		try
+		{
+			PreparedStatement preparedStatement = connection.prepareStatement("delete from students where id = ?");
+			preparedStatement.setInt(1, Integer.parseInt(studentId));
+			preparedStatement.execute();
+		}
+		catch(SQLException e)
+		{
+
+		}
+	}
+
+	public Student updateStudent(Student student)
+	{
+		Connection connection = jdbcConnector.createConnection();
+		if(connection == null)
+		{
+			return null;
+		}
+
+		try
+		{
+			PreparedStatement preparedStatement = connection.prepareStatement("update students set name = ?, surname = ?, phone = ?, email = ? where id = ?");
+			preparedStatement.setString(1, student.getName());
+			preparedStatement.setString(2, student.getSurname());
+			preparedStatement.setString(3, student.getPhone());
+			preparedStatement.setString(4, student.getEmail());
+			preparedStatement.setInt(5, student.getId());
+
+			preparedStatement.executeUpdate();
+
+			return student;
+		}
+		catch(SQLException e)
+		{
+
+		}
+
+		return null;
 	}
 }
