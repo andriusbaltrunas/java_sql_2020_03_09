@@ -96,6 +96,46 @@ public class StudentAddressService
 		return null;
 	}
 
+	public StudentAddress updateStudentAddress(StudentAddress studentAddress)
+	{
+		try
+		{
+			PreparedStatement statement = jdbcConnector.getPrepareStatement("update student_address set country = ?, city = ?, street = ?, post_code = ? where id = ?");
+			statement.setString(1, studentAddress.getCountry());
+			statement.setString(2, studentAddress.getCity());
+			statement.setString(3, studentAddress.getStreet());
+			statement.setString(4, studentAddress.getPostCode());
+			statement.setInt(5, studentAddress.getId());
+
+			statement.executeUpdate();
+
+			return studentAddress;
+
+		}
+		catch(SQLException e)
+		{
+
+		}
+
+		return null;
+	}
+
+	public void deleteStudentAddress(String addressId, String studentId)
+	{
+		try
+		{
+			PreparedStatement prepareStatement = jdbcConnector.getPrepareStatement("delete from student_address where id = ? and student_id = ?");
+			prepareStatement.setInt(1, Integer.parseInt(addressId));
+			prepareStatement.setInt(2, Integer.parseInt(studentId));
+
+			prepareStatement.execute();
+		}
+		catch(SQLException e)
+		{
+
+		}
+	}
+
 	private StudentAddress convertToStudentAddress(ResultSet resultSet) throws SQLException
 	{
 		return new StudentAddress(resultSet.getInt("id"),
