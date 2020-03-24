@@ -5,6 +5,8 @@ import com.kcs.springboot.example.service.StudentAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -36,4 +38,13 @@ public class StudentAddressController
 	{
 		return studentAddressService.getStudentAddress(studentId, addressId);
 	}
+
+	@PostMapping
+	public StudentAddress createStudentAddress(@PathVariable("studentId") String studentId, @RequestBody StudentAddress studentAddress)
+	{
+		return studentAddressService.createStudentAddress(studentAddress, studentId);
+	}
+
+
+
 }

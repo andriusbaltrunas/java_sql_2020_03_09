@@ -68,6 +68,34 @@ public class StudentAddressService
 		return null;
 	}
 
+	public StudentAddress createStudentAddress(StudentAddress studentAddress, String studentId)
+	{
+		try
+		{
+			studentAddress.setStudentId(Integer.parseInt(studentId));
+			PreparedStatement prepareStatement = jdbcConnector
+					.getPrepareStatement("insert into student_address(student_id, country, city, street, post_code) values(?, ?, ?, ?, ?)");
+			prepareStatement.setInt(1, studentAddress.getStudentId());
+			prepareStatement.setString(3, studentAddress.getCity());
+			prepareStatement.setString(4, studentAddress.getStreet());
+			prepareStatement.setString(5, studentAddress.getPostCode());
+			prepareStatement.setString(2, studentAddress.getCountry());
+
+			prepareStatement.execute();
+
+			return getStudentAddresses(studentId).stream()
+					.filter(a -> a.equals(studentAddress))
+					.findFirst()
+					.orElse(null);
+		}
+		catch(SQLException e)
+		{
+
+		}
+
+		return null;
+	}
+
 	private StudentAddress convertToStudentAddress(ResultSet resultSet) throws SQLException
 	{
 		return new StudentAddress(resultSet.getInt("id"),
